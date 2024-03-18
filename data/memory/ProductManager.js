@@ -22,6 +22,25 @@ class ProductManager {
   read(){
     return ProductManager.#products
   }
+
+  readOne(id){
+    if (!id) {
+      console.log("El prodcuto que esta buscando no existe")
+    } else {
+      console.log("¡El producto se a encontrado!")
+      return ProductManager.#products.find (each => each.id === id)
+    }
+  }
+
+  destroy(id){
+    if (!id) {
+      console.log("El prodcuto que quiere eliminar no existe")
+    } else {
+      console.log("¡El producto se elimino con exito!")
+      return ProductManager.#products.filter (each => each.id !== id)
+    }
+    
+  }
 }
 
 const gestorDeProductos = new ProductManager()
@@ -77,3 +96,5 @@ gestorDeProductos.create({
 })
 
 console.log(gestorDeProductos.read())
+console.log(gestorDeProductos.readOne()) //Colocar el ID del producto que quiere buscar
+console.log(gestorDeProductos.destroy()) //Colocar el ID del producto que quiere eliminar
