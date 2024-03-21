@@ -23,7 +23,27 @@ class UserManager {
   read(){
     return UserManager.#users
   }
+
+  readOne(id){
+    if (!id) {
+      console.log("El usuario que esta buscando no existe")
+    } else {
+      console.log("¡El usuario se a encontrado!")
+      return UserManager.#users.find (each => each.id === id)
+    }
+  }
+
+  destroy(id){
+    if (!id) {
+      console.log("El usuario que quiere eliminar no existe")
+    } else {
+      console.log("¡El usuario se elimino con exito!")
+      return UserManager.#users.filter (each => each.id !== id)
+    }
+    
+  }
 }
+
 
 //Usuario 1
 const gestorDeUsuarios = new UserManager()
@@ -60,3 +80,5 @@ gestorDeUsuarios.create({
 }) 
 
 console.log(gestorDeUsuarios.read())
+console.log(gestorDeUsuarios.readOne()) //Colocar el ID del producto que quiere buscar
+console.log(gestorDeUsuarios.destroy()) //Colocar el ID del producto que quiere eliminar
