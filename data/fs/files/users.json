@@ -1,44 +1,60 @@
 [
   {
-    "id": "94d3326b378c6b0d6d237474",
+    "id": "5ddc2797e0506b1f3a2a92b7",
     "foto": "https://us.123rf.com/450wm/belopoppa/belopoppa1809/belopoppa180900002/109693900-imagen-de-marcador-de-posici%C3%B3n-de-perfil-silueta-gris-sin-foto-de-una-persona-en-el-avatar-la.jpg",
-    "email": "lautaro@gmail.com",
-    "password": "lau12345",
-    "role": "Usuario"
+    "email": "usuario1@example.com",
+    "password": "contraseña123",
+    "role": "usuario"
   },
   {
-    "id": "3eb706e7a52f92e0f2a2d239",
+    "id": "65ac8f2097638b59157e1a2a",
     "foto": "https://us.123rf.com/450wm/belopoppa/belopoppa1809/belopoppa180900002/109693900-imagen-de-marcador-de-posici%C3%B3n-de-perfil-silueta-gris-sin-foto-de-una-persona-en-el-avatar-la.jpg",
-    "email": "matias@gmail.com",
-    "password": "mati12345",
-    "role": "Administrador"
+    "email": "usuario2@example.com",
+    "password": "contraseña456",
+    "role": "usuario"
   },
   {
-    "id": "0ee1765555e71314b3d4112f",
-    "foto": "https://img.freepik.com/foto-gratis/apuesto-joven-brazos-cruzados-sobre-fondo-blanco_23-2148222620.jpg",
-    "email": "jorge@gmail.com",
-    "password": "jorge12345",
-    "role": "Administrador"
-  },
-  {
-    "id": "725478a7f05c6d3337d973ad",
+    "id": "09c86a1c6df5b77e9155f92a",
     "foto": "https://us.123rf.com/450wm/belopoppa/belopoppa1809/belopoppa180900002/109693900-imagen-de-marcador-de-posici%C3%B3n-de-perfil-silueta-gris-sin-foto-de-una-persona-en-el-avatar-la.jpg",
-    "email": "alberto@gmail.com",
-    "password": "agustin12345",
-    "role": "Usuario"
+    "email": "usuario3@example.com",
+    "password": "contraseña789",
+    "role": "usuario"
   },
   {
-    "id": "7aa32d2bee8c9a9261e735a4",
-    "foto": "https://img.freepik.com/foto-gratis/retrato-hombre-guapo-sonriente_329181-1660.jpg",
-    "email": "juan@gmail.com",
-    "password": "agustin12345",
-    "role": "Usuario"
-  },
-  {
-    "id": "1e12f2efe9cb20e670a218cf",
+    "id": "63a8ec1f2da77f20065a6f6b",
     "foto": "https://us.123rf.com/450wm/belopoppa/belopoppa1809/belopoppa180900002/109693900-imagen-de-marcador-de-posici%C3%B3n-de-perfil-silueta-gris-sin-foto-de-una-persona-en-el-avatar-la.jpg",
-    "email": "alan@gmail.com.jpg",
-    "password": "agustin12345",
-    "role": "Usuario"
+    "email": "admin@example.com",
+    "password": "admin123",
+    "role": "administrador"
+  },
+  {
+    "id": "38d51932540eb455f8418e64",
+    "foto": "https://us.123rf.com/450wm/belopoppa/belopoppa1809/belopoppa180900002/109693900-imagen-de-marcador-de-posici%C3%B3n-de-perfil-silueta-gris-sin-foto-de-una-persona-en-el-avatar-la.jpg",
+    "email": "09c86a1c6df5b77e9155f92a",
+    "role": 0
+  },
+  {
+    "id": "36fb749abdf8fadc15dd0ae8",
+    "foto": "https://us.123rf.com/450wm/belopoppa/belopoppa1809/belopoppa180900002/109693900-imagen-de-marcador-de-posici%C3%B3n-de-perfil-silueta-gris-sin-foto-de-una-persona-en-el-avatar-la.jpg",
+    "email": "09c86a1c6df5b77e9155f92a",
+    "role": 0
+  },
+  {
+    "id": "dadc9c0676ab46c99bd7b80a",
+    "foto": "https://us.123rf.com/450wm/belopoppa/belopoppa1809/belopoppa180900002/109693900-imagen-de-marcador-de-posici%C3%B3n-de-perfil-silueta-gris-sin-foto-de-una-persona-en-el-avatar-la.jpg",
+    "email": "09c86a1c6df5b77e9155f92a",
+    "role": 0
+  },
+  {
+    "id": "89e411477385351020c00b74",
+    "foto": "https://us.123rf.com/450wm/belopoppa/belopoppa1809/belopoppa180900002/109693900-imagen-de-marcador-de-posici%C3%B3n-de-perfil-silueta-gris-sin-foto-de-una-persona-en-el-avatar-la.jpg",
+    "email": "to do",
+    "role": 0
+  },
+  {
+    "id": "215cc411be673b795cac7830",
+    "foto": "https://us.123rf.com/450wm/belopoppa/belopoppa1809/belopoppa180900002/109693900-imagen-de-marcador-de-posici%C3%B3n-de-perfil-silueta-gris-sin-foto-de-una-persona-en-el-avatar-la.jpg",
+    "email": "09c86a1c6df5b77e9155f92a",
+    "role": 0
   }
 ]
