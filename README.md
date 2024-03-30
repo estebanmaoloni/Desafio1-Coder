@@ -9,6 +9,10 @@
 - Asignar condiciones estrictas para la creacion de usuarios y productos.
 - Logs para mantener a los usuarios informados sobre sus usuarios y tareas creadas.
 - Busqueda de productos y usuarios a travez de id, categoria y rol
+- Eliminacion de usuarios y productos habilitada
+- Realizacion de cambios en usuarios y productos habilitada
+- Uso de routes para un codigo mas ordenado y facilitacion de lectura del codigo
+- Manejo de errores y rutas no encontradas a traves de middlewares
 
 
 ## Instalación
@@ -19,31 +23,22 @@ Para instalar sigue estos pasos:
 
 
 
-## Datos a tener en cuenta
-
-1. Todo debe ser probado en la ruta http://localhost:8080/api de ahi en adelante se le agregan el user o el product y la categoria el rol o el id
-
-## Ejemplos
-
 
 # Visualizacion
 
-- http://localhost:8080/api/users
+- De ahora en mas las rutas deben ser visualizadas a traves de Postman
+
+# Descarga de Postman
+
+[https://www.postman.com/]
+
+# Rutas
 - http://localhost:8080/api/products
+- http://localhost:8080/api/products/:pid
+- http://localhost:8080/api/users
+- http://localhost:8080/api/users:uid
 
-# Creaacion
+# Datos a tener en cuenta
 
-- http://localhost:8080/api/users/usuario1@gmail.com
-- http://localhost:8080/api/products/lentes/200
-
-# Filtrado por categoria on rol
-- http://localhost:8080/api/users?role=administrador
-- http://localhost:8080/api/products?category=to do
-
-# Filtrado por id
-- http://localhost:8080/api/users/65ac8f2097638b59157e1a2a
-- http://localhost:8080/api/products/087acdbd852d2d6635498092
-
-
-
-
+- Cuando se utilicen las rudas con [:uid] y [:pid] deben ser atribuidos los id en la seccion [Value] de los productos o usuarios 
+que desea encontrar modificar o eliminar en la seccion [Params] de postman

@@ -1,13 +1,13 @@
 // const fs = require("fs")
 // const crypto = require("crypto")
 
-import fs from"fs"
-import crypto from"crypto"
+import fs from "fs"
+import crypto from "crypto"
 
 class UserManagerFs {
 
   constructor() {
-    this.path = "./data/fs/files/users.json"
+    this.path = "./src/data/fs/files/users.json"
     this.init()
   }
 
@@ -41,6 +41,7 @@ class UserManagerFs {
         readData = JSON.stringify(readData, null, 2)
         await fs.promises.writeFile(this.path, readData)
         console.log("¡Usuario creado con exito!")
+        return user
       }
     } catch (error) {
       throw error
@@ -53,7 +54,7 @@ class UserManagerFs {
       let readData = await fs.promises.readFile(this.path, "utf-8")
       readData = JSON.parse(readData)
       if (rol) {
-        readData = readData.filter(each=>each.role === rol)
+        readData = readData.filter(each => each.role === rol)
       }
       console.log(readData)
       return readData
@@ -76,6 +77,27 @@ class UserManagerFs {
       }
     } catch (error) {
       throw (error)
+    }
+  }
+
+  async update(id, data) {
+    try {
+      let all = await this.read();
+      let one = all.find((each) => each.id === id);
+      if (one) {
+        for (let prop in data) {
+          one[prop] = data[prop];
+        }
+        all = JSON.stringify(all, null, 2);
+        await fs.promises.writeFile(this.path, all);
+        return one;
+      } else {
+        const error = new Error("Not found!");
+        error.statusCode = 404;
+        throw error;
+      }
+    } catch (error) {
+      throw error;
     }
   }
 
@@ -118,7 +140,7 @@ class UserManagerFs {
 
 //     //Usuario 2
 //     await gestorDeUsuarios.create({
-      
+
 //       email: "matias@gmail.com",
 //       password: "mati12345",
 //       role: "Administrador"
@@ -142,7 +164,7 @@ class UserManagerFs {
 
 //     //Usuario 5 
 //     await gestorDeUsuarios.create({
-      
+
 //       email: "alberto@gmail.com",
 //       password: "agustin12345",
 //       role: "Usuario"

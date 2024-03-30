@@ -7,7 +7,7 @@ import crypto from"crypto"
 class ProductManagerFs {
 
   constructor() {
-    this.path = "./data/fs/files/products.json"
+    this.path = "./src/data/fs/files/products.json"
     this.init()
   }
 
@@ -42,6 +42,7 @@ class ProductManagerFs {
         readData = JSON.stringify(readData, null, 2)
         await fs.promises.writeFile(this.path, readData)
         console.log("¡Producto creado con exito!")
+        return product  
       }
     } catch (error) {
       throw error
@@ -64,8 +65,9 @@ class ProductManagerFs {
 
   async readOne(id) {
     try {
-      let readData = await fs.promises.readFile(this.path, "utf-8")
-      readData = JSON.parse(readData)
+      // let readData = await fs.promises.readFile(this.path, "utf-8")
+      // readData = JSON.parse(readData)
+      let readData = await this.read();
       let one = readData.find((each) => each.id === id)
       if (!one) {
         throw new Error("Id no encontrado")
@@ -76,6 +78,27 @@ class ProductManagerFs {
       }
     } catch (error) {
       throw (error)
+    }
+  }
+
+  async update(id, data){
+    try {
+      let all = await this.read();
+      let one = all.find((each) => each.id === id);
+      if (one) {
+        for (let prop in data) {
+          one[prop] = data[prop];
+        }
+        all = JSON.stringify(all, null, 2);
+        await fs.promises.writeFile(this.path, all);
+        return one;
+      } else {
+        const error = new Error("Not found!");
+        error.statusCode = 404;
+        throw error;
+      }
+    } catch (error) {
+      throw error;
     }
   }
 
