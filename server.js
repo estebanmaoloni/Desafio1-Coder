@@ -12,7 +12,7 @@ server.listen(port, ready);
 
 server.use(express.urlencoded({ extended: true }));
 server.use(express.json());
-
+server.use(morgan("dev"))
 server.use("/", indexRouter);
 server.use(errorHandler)
 server.use(pathHandler)
