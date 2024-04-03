@@ -15,14 +15,16 @@ server.use(express.urlencoded({
 server.get("/", async (req, resp) => {
     try {
         return resp.status(200).json({
+            statusCode: 200,
             resp: "API SUCCESS",
             success: true
         })
     } catch (error) {
         console.log(error)
         return resp.status(500).json({
+            statusCode: 404,
             resp: "API FAILED",
-            success: false
+            resp: null,
         })
     }
 })
@@ -35,14 +37,15 @@ server.get("/api/products/:title/:price", async(req, resp)=>{
         const data = {title, price}
         const one = await productManager.create(data)
         return resp.status(201).json({
+            statusCode: 201,
             resp: data,
-            success: true
         })
     } catch (error) {
         console.log(error)
         return resp.status(500).json({
-            resp: "ERROR",
-            success: false
+            statusCode: 500,
+            resp: null,
+            message:"Products not found"
         })
     }
 })
@@ -52,15 +55,16 @@ server.get("/api/products", async(req, resp)=>{
         const {category} = req.query
         const all = await productManager.read(category)
         return resp.status(201).json({
+            statusCode: 201,
             resp: all,
-            category,
-            success: true
+            category
         })
     } catch (error) {
         console.log(error)
         return resp.status(500).json({
-            resp: "ERROR",
-            success: false
+            statusCode: 500,
+            resp: null,
+            message:"Products not found"
         })
     }
 })
@@ -71,8 +75,8 @@ server.get("/api/products/:pid", async(req, resp)=>{
         const one = await productManager.readOne(pid)
         if (one) {
             return resp.status(200).json({
+                statusCode: 200,
                 resp: one,
-                success: true
             })
         }else{
             const error = new Error("NOT FOUND")
@@ -82,8 +86,9 @@ server.get("/api/products/:pid", async(req, resp)=>{
     } catch (error) {
         console.log(error)
         return resp.status(error.statusCode).json({
-            resp: "ERROR",
-            success: false
+            statusCode: 404,
+            resp: null,
+            message:"Products not found"
         })
     }
 })
@@ -97,14 +102,15 @@ server.get("/api/users/:email", async(req, resp)=>{
         const data = {email}
         const one = await userManager.create(data)
         return resp.status(201).json({
+            statusCode: 201,
             resp: data,
-            success: true
         })
     } catch (error) {
         console.log(error)
         return resp.status(500).json({
-            resp: "ERROR",
-            success: false
+            statusCode: 500,
+            resp: null,
+            message:"User not found"
         })
     }
 })
@@ -114,15 +120,16 @@ server.get("/api/users", async(req, resp)=>{
         const {role} = req.query
         const all = await userManager.read(role)
         return resp.status(201).json({
+            statusCode: 201,
             resp: all,
             role,
-            success: true
         })
     } catch (error) {
         console.log(error)
         return resp.status(500).json({
-            resp: "ERROR",
-            success: false
+            statusCode: 500,
+            resp: null,
+            message:"User not found"
         })
     }
 })
@@ -133,8 +140,8 @@ server.get("/api/users/:uid", async(req, resp)=>{
         const one = await userManager.readOne(uid)
         if (one) {
             return resp.status(200).json({
+                statusCode: 200,
                 resp: one,
-                success: true
             })
         }else{
             const error = new Error("NOT FOUND")
@@ -144,8 +151,9 @@ server.get("/api/users/:uid", async(req, resp)=>{
     } catch (error) {
         console.log(error)
         return resp.status(error.statusCode).json({
-            resp: "ERROR",
-            success: false
+            statusCode: 404,
+            resp: null,
+            message:"User not found"
         })
     }
 })

@@ -1,5 +1,3 @@
-// const fs = require("fs")
-// const crypto = require("crypto")
 
 import fs from"fs"
 import crypto from"crypto"
@@ -16,17 +14,17 @@ class UserManagerFs {
     if (!exist) {
       const userData = JSON.stringify([], null, 2)
       fs.writeFileSync(this.path, userData)
-      console.log("¡Archivo fue creado!")
+      console.log("¡The file was created!")
     } else {
-      console.log("El archivo ya fue creado y contiene datos")
+      console.log("The file has already been created and contains data")
     }
   }
 
   async create(data) {
     try {
       if (!data.email) {
-        const error = new Error("El campo email es obligatorio") //Forma de manejo de errores
-        throw error //Forma de manejo de errores
+        const error = new Error("The email field is required")
+        throw error 
       } else {
         const user = {
           id: crypto.randomBytes(12).toString("hex"),
@@ -40,7 +38,8 @@ class UserManagerFs {
         readData.push(user)
         readData = JSON.stringify(readData, null, 2)
         await fs.promises.writeFile(this.path, readData)
-        console.log("¡Usuario creado con exito!")
+        console.log("¡User created successfully!")
+        return user
       }
     } catch (error) {
       throw error
@@ -68,10 +67,10 @@ class UserManagerFs {
       readData = JSON.parse(readData)
       let one = readData.find((each) => each.id === id)
       if (!one) {
-        throw new Error("Id no encontrado")
+        throw new Error("Id not found")
       } else {
         console.log(one)
-        console.log("Usuario encontrado")
+        console.log("User found")
         return one
       }
     } catch (error) {
@@ -85,7 +84,7 @@ class UserManagerFs {
       readData = JSON.parse(readData)
       let one = readData.find((each) => each.id === id)
       if (!one) {
-        throw new Error("Id no encontrado")
+        throw new Error("Id not found")
       } else {
         let filtered = readData.filter((each) => each.id !== id)
         filtered = JSON.stringify(filtered, null, 2)
@@ -100,77 +99,6 @@ class UserManagerFs {
 }
 
 
-// async function usersGenerator() {
-
-//   try {
-//     const gestorDeUsuarios = new UserManagerFs()
-
-//     //await gestorDeUsuarios.read()
-//     //await gestorDeUsuarios.readOne("") //Colocar el ID del producto que quiere buscar
-//     //await gestorDeUsuarios.destroy("") //Colocar el ID del producto que quiere eliminar
-
-//     //Usuario 1
-//     await gestorDeUsuarios.create({
-//       email: "lautaro@gmail.com",
-//       password: "lau12345",
-//       role: "Usuario"
-//     })
-
-//     //Usuario 2
-//     await gestorDeUsuarios.create({
-      
-//       email: "matias@gmail.com",
-//       password: "mati12345",
-//       role: "Administrador"
-//     })
-
-//     //Usuario 3 
-//     await gestorDeUsuarios.create({
-//       foto: "https://img.freepik.com/foto-gratis/apuesto-joven-brazos-cruzados-sobre-fondo-blanco_23-2148222620.jpg",
-//       email: "jorge@gmail.com",
-//       password: "jorge12345",
-//       role: "Administrador"
-//     })
-
-//     // //Usuario 4 (Prueba de error)
-//     // await gestorDeUsuarios.create({
-//     //   foto: "https://img.freepik.com/foto-gratis/retrato-sonriente-joven-feliz-aislado-blanco_186202-6708.jpg",
-//     //   email: "",
-//     //   password: "agustin12345",
-//     //   role: "Administrador"
-//     // })
-
-//     //Usuario 5 
-//     await gestorDeUsuarios.create({
-      
-//       email: "alberto@gmail.com",
-//       password: "agustin12345",
-//       role: "Usuario"
-//     })
-
-//     //Usuario 6
-//     await gestorDeUsuarios.create({
-//       foto: "https://img.freepik.com/foto-gratis/retrato-hombre-guapo-sonriente_329181-1660.jpg",
-//       email: "juan@gmail.com",
-//       password: "agustin12345",
-//       role: "Usuario"
-//     })
-
-//     //Usuario 7
-//     await gestorDeUsuarios.create({
-//       foto: "",
-//       email: "alan@gmail.com.jpg",
-//       password: "agustin12345",
-//       role: "Usuario"
-//     })
-
-//   } catch (error) {
-//     throw error
-//   }
-
-// }
-
-// usersGenerator()
 
 const userManager = new UserManagerFs()
 export default userManager
