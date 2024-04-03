@@ -1,6 +1,3 @@
-// const fs = require("fs")
-// const crypto = require("crypto")
-
 import fs from"fs"
 import crypto from"crypto"
 
@@ -16,17 +13,17 @@ class ProductManagerFs {
     if (!exist) {
       const productData = JSON.stringify([], null, 2)
       fs.writeFileSync(this.path, productData)
-      console.log("¡Archivo fue creado!")
+      console.log("¡File was created!")
     } else {
-      console.log("El archivo ya fue creado y contiene datos")
+      console.log("The file has already been created and contains data")
     }
   }
 
   async create(data) {
     try {
       if (!data.title || !data.price) {
-        const error = new Error("El campo titulo y precio son obligatorios") //Forma de manejo de errores
-        throw error //Forma de manejo de errores
+        const error = new Error("The title and price fields are required.") 
+        throw error 
       } else {
         const product = {
           id: crypto.randomBytes(12).toString("hex"),
@@ -41,7 +38,7 @@ class ProductManagerFs {
         readData.push(product)
         readData = JSON.stringify(readData, null, 2)
         await fs.promises.writeFile(this.path, readData)
-        console.log("¡Producto creado con exito!")
+        console.log("¡Successfully created product!")
         return product  
       }
     } catch (error) {
@@ -70,10 +67,10 @@ class ProductManagerFs {
       let readData = await this.read();
       let one = readData.find((each) => each.id === id)
       if (!one) {
-        throw new Error("Id no encontrado")
+        throw new Error("Id not found")
       } else {
         console.log(one)
-        console.log("Producto encontrado")
+        console.log("Product found")
         return one
       }
     } catch (error) {
@@ -108,7 +105,7 @@ class ProductManagerFs {
       readData = JSON.parse(readData)
       let one = readData.find((each) => each.id === id)
       if (!one) {
-        throw new Error("Id no encontrado")
+        throw new Error("Id not found")
       } else {
         let filtered = readData.filter((each) => each.id !== id)
         filtered = JSON.stringify(filtered, null, 2)
@@ -122,118 +119,6 @@ class ProductManagerFs {
   }
 }
 
-// async function productGenerator() {
-
-//   try {
-
-//     const gestorDeProductos = new ProductManagerFs()
-
-//     //await gestorDeProductos.read()
-//     //await gestorDeProductos.readOne("") //Colocar el ID del producto que quiere buscar
-//     //await gestorDeProductos.destroy("") //Colocar el ID del producto que quiere eliminar
-
-//     //Producto 1
-//     await gestorDeProductos.create({
-//       title: "Zapatilla",
-//       photo: "",
-//       category: "Calzado",
-//       price: 100,
-//       stock: ""
-
-//     })
-
-//     // //Producto 2 (Prueba de error)
-//     // await gestorDeProductos.create({
-//     //   title: "Botines",
-//     //   category: "Calzado",
-//     //   price: "",
-//     //   stock: 300
-
-//     // })
-
-//     //Producto 3
-//     await gestorDeProductos.create({
-//       title: "Pantalon",
-//       category: "Prendas",
-//       price: 45,
-//       stock: 200
-
-//     })
-
-//     //Producto 4
-//     await gestorDeProductos.create({
-//       title: "Remera",
-//       photo: "",
-//       category: "Prendas",
-//       price: 50,
-//       stock: 100
-
-//     })
-
-//     // //Producto 5 (Prueba de error)
-//     // await gestorDeProductos.create({
-//     //   title: "",
-//     //   category: "Prendas",
-//     //   price: 25,
-//     //   stock: 40
-
-//     // })
-
-//     //Producto 6
-//     await gestorDeProductos.create({
-//       title: "Medias",
-//       photo: "",
-//       category: "Prendas",
-//       price: 10,
-//       stock: 500
-
-//     })
-
-//     //Producto 7
-//     await gestorDeProductos.create({
-//       title: "Boxers",
-//       photo: "",
-//       category: "Ropa interior",
-//       price: 18,
-//       stock: 300
-
-//     })
-
-//     //Producto 8
-//     await gestorDeProductos.create({
-//       title: "Aros",
-//       photo: "",
-//       category: "Joyeria",
-//       price: 150,
-//       stock: 10
-
-//     })
-
-//     //Producto 9
-//     await gestorDeProductos.create({
-//       title: "Reloj",
-//       category: "Joyeria",
-//       price: 500,
-//       stock: 5
-
-//     })
-
-//     //Producto 10
-//     await gestorDeProductos.create({
-//       title: "Anillos",
-//       photo: "",
-//       category: "Joyeria",
-//       price: 220,
-//       stock: 8
-
-//     })
-//   } catch (error) {
-//     throw error
-//   }
-// }
-
-
-// productGenerator()
 
 const productManager = new ProductManagerFs()
 export default productManager
