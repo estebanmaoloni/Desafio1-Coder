@@ -1,0 +1,44 @@
+[
+  {
+    "id": "5ddc2797e0506b1f3a2a92b7",
+    "foto": "https://us.123rf.com/450wm/belopoppa/belopoppa1809/belopoppa180900002/109693900-imagen-de-marcador-de-posici%C3%B3n-de-perfil-silueta-gris-sin-foto-de-una-persona-en-el-avatar-la.jpg",
+    "email": "usuario1@example.com",
+    "password": "contraseña123",
+    "role": "usuario"
+  },
+  {
+    "id": "65ac8f2097638b59157e1a2a",
+    "foto": "https://us.123rf.com/450wm/belopoppa/belopoppa1809/belopoppa180900002/109693900-imagen-de-marcador-de-posici%C3%B3n-de-perfil-silueta-gris-sin-foto-de-una-persona-en-el-avatar-la.jpg",
+    "email": "usuario2@example.com",
+    "password": "contraseña456",
+    "role": "usuario"
+  },
+  {
+    "id": "09c86a1c6df5b77e9155f92a",
+    "foto": "https://us.123rf.com/450wm/belopoppa/belopoppa1809/belopoppa180900002/109693900-imagen-de-marcador-de-posici%C3%B3n-de-perfil-silueta-gris-sin-foto-de-una-persona-en-el-avatar-la.jpg",
+    "email": "usuario3@example.com",
+    "password": "contraseña789",
+    "role": "usuario"
+  },
+  {
+    "id": "63a8ec1f2da77f20065a6f6b",
+    "foto": "https://us.123rf.com/450wm/belopoppa/belopoppa1809/belopoppa180900002/109693900-imagen-de-marcador-de-posici%C3%B3n-de-perfil-silueta-gris-sin-foto-de-una-persona-en-el-avatar-la.jpg",
+    "email": "admin@example.com",
+    "password": "contraseña del admin cambiada en postman",
+    "role": "administrador"
+  },
+  {
+    "id": "508f74132d973745fc05c469",
+    "foto": "https://us.123rf.com/450wm/belopoppa/belopoppa1809/belopoppa180900002/109693900-imagen-de-marcador-de-posici%C3%B3n-de-perfil-silueta-gris-sin-foto-de-una-persona-en-el-avatar-la.jpg",
+    "email": "postman@gmail.com",
+    "password": "postman1234",
+    "role": 0
+  },
+  {
+    "id": "9fddcf9cdf0849c50f4380ac",
+    "foto": "https://us.123rf.com/450wm/belopoppa/belopoppa1809/belopoppa180900002/109693900-imagen-de-marcador-de-posici%C3%B3n-de-perfil-silueta-gris-sin-foto-de-una-persona-en-el-avatar-la.jpg",
+    "email": "prueba@gmail.com",
+    "password": "hola123",
+    "role": 0
+  }
+]
