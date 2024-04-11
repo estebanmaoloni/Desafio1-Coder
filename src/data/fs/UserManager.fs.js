@@ -27,7 +27,7 @@ class UserManagerFs {
       } else {
         const user = {
           id: crypto.randomBytes(12).toString("hex"),
-          foto: data.foto || "https://us.123rf.com/450wm/belopoppa/belopoppa1809/belopoppa180900002/109693900-imagen-de-marcador-de-posici%C3%B3n-de-perfil-silueta-gris-sin-foto-de-una-persona-en-el-avatar-la.jpg",
+          photo: data.photo || "https://static.vecteezy.com/system/resources/previews/024/340/668/non_2x/character-of-faceless-user-in-black-circle-vector.jpg",
           email: data.email,
           password: data.password,
           role: data.role || 0

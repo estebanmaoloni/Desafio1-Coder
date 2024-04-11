@@ -1,12 +1,25 @@
 import express from "express";
+import { createServer } from "http";
+import { Server } from "socket.io";
+import morgan from "morgan";
+import {engine} from "express-handlebars"
 import indexRouter from "./src/routers/index.router.js";
 import errorHandler from "./src/middlewares/errorHandler.js";
 import pathHandler from "./src/middlewares/pathHandler.js";
+import __dirname from "./utils.js";
+import socketCB from "./src/routers/index.socket.js"
 
 const server = express();
 const port = 8080;
 const ready = () => console.log("Server redy on port: " + port);
-server.listen(port, ready);
+const nodeServer = createServer(server)
+const socketServer = new Server(nodeServer)
+nodeServer.listen(port, ready);
+socketServer.on("connection",socketCB)
+
+server.engine("handlebars", engine())
+server.set("view engine", "handlebars")
+server.set("views", __dirname + "/src/views")
 
 server.use(express.urlencoded({ extended: true }));
 server.use(express.json());

@@ -1,6 +1,5 @@
 # Desafio-Coder
 
-
 ## Características principales
 
 - Crear usuarios y productos fácilmente de forma asincrona y archivados en una carpeta de formato JSON.
@@ -14,15 +13,11 @@
 - Uso de routes para un codigo mas ordenado y facilitacion de lectura del codigo
 - Manejo de errores y rutas no encontradas a traves de middlewares
 
-
 ## Instalación
 
 Para instalar sigue estos pasos:
 
 1. Clona el repositorio desde GitHub: `git clone https://github.com/estebanmaoloni/Desafio1-Coder.git`
-
-
-
 
 # Visualizacion
 

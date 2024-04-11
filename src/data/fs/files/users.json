@@ -1,44 +1,44 @@
 [
   {
     "id": "5ddc2797e0506b1f3a2a92b7",
-    "foto": "https://us.123rf.com/450wm/belopoppa/belopoppa1809/belopoppa180900002/109693900-imagen-de-marcador-de-posici%C3%B3n-de-perfil-silueta-gris-sin-foto-de-una-persona-en-el-avatar-la.jpg",
+    "photo": "https://pymstatic.com/5844/conversions/personas-emocionales-wide_webp.webp",
     "email": "usuario1@example.com",
     "password": "contraseña123",
     "role": "usuario"
   },
   {
     "id": "65ac8f2097638b59157e1a2a",
-    "foto": "https://us.123rf.com/450wm/belopoppa/belopoppa1809/belopoppa180900002/109693900-imagen-de-marcador-de-posici%C3%B3n-de-perfil-silueta-gris-sin-foto-de-una-persona-en-el-avatar-la.jpg",
+    "photo": "https://covalto.com/static/78498ccda70933a5f1e3edc3e40d3cbe/34aca/Hero_Mobile_Cuenta_Personas_V1_1_8046e424ea.webp",
     "email": "usuario2@example.com",
     "password": "contraseña456",
     "role": "usuario"
   },
   {
     "id": "09c86a1c6df5b77e9155f92a",
-    "foto": "https://us.123rf.com/450wm/belopoppa/belopoppa1809/belopoppa180900002/109693900-imagen-de-marcador-de-posici%C3%B3n-de-perfil-silueta-gris-sin-foto-de-una-persona-en-el-avatar-la.jpg",
+    "photo": "https://static.vecteezy.com/system/resources/previews/024/340/668/non_2x/character-of-faceless-user-in-black-circle-vector.jpg",
     "email": "usuario3@example.com",
     "password": "contraseña789",
     "role": "usuario"
   },
   {
     "id": "63a8ec1f2da77f20065a6f6b",
-    "foto": "https://us.123rf.com/450wm/belopoppa/belopoppa1809/belopoppa180900002/109693900-imagen-de-marcador-de-posici%C3%B3n-de-perfil-silueta-gris-sin-foto-de-una-persona-en-el-avatar-la.jpg",
+    "photo": "https://media.gq.com.mx/photos/640f3efd5b759e424e0f463d/master/w_2560%2Cc_limit/premios%2520oscar%25202023%2520broches%2520hombre.jpg",
     "email": "admin@example.com",
     "password": "contraseña del admin cambiada en postman",
     "role": "administrador"
   },
   {
-    "id": "508f74132d973745fc05c469",
-    "foto": "https://us.123rf.com/450wm/belopoppa/belopoppa1809/belopoppa180900002/109693900-imagen-de-marcador-de-posici%C3%B3n-de-perfil-silueta-gris-sin-foto-de-una-persona-en-el-avatar-la.jpg",
-    "email": "postman@gmail.com",
-    "password": "postman1234",
+    "id": "cef93796353d60be3684042d",
+    "photo": "https://static.vecteezy.com/system/resources/previews/024/340/668/non_2x/character-of-faceless-user-in-black-circle-vector.jpg",
+    "email": "sdaasdasd",
+    "password": "sadsdasda",
     "role": 0
   },
   {
-    "id": "9fddcf9cdf0849c50f4380ac",
-    "foto": "https://us.123rf.com/450wm/belopoppa/belopoppa1809/belopoppa180900002/109693900-imagen-de-marcador-de-posici%C3%B3n-de-perfil-silueta-gris-sin-foto-de-una-persona-en-el-avatar-la.jpg",
-    "email": "prueba@gmail.com",
-    "password": "hola123",
+    "id": "b71589a604727087768029a8",
+    "photo": "sdsad",
+    "email": "sdasad",
+    "password": "sdasad",
     "role": 0
   }
 ]

@@ -1,0 +1,37 @@
+<div class="d-flex">
+    <div id="register" class="w-50 container d-flex flex-column justify-content-center align-items-center">
+        <h2>Registro</h2>
+        <input type="text" name="photo" id="photo" placeholder="Photo">
+        <input type="email" name="email" id="email" placeholder="Email">
+        <input type="password" name="password" id="password" placeholder="Password">
+        <input type="button" value="Register" id="registerButton" >
+    </div>
+    <div id="users" class="w-50"></div>
+</div>
+
+<script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+<script>
+    const socket = io();
+    socket.on("usersRegister", data => {
+        let template = ``
+        template = data.map(each =>`
+            <div class="container d-flex justify-content-center align-items-center">
+                <div class="">
+                    <h2 class="text-center mt-3">Lista de usuarios</h2>
+                        <div class="card p-2 mb-3" style="width: 22rem;"> 
+                            <h3>${each.email}</h3>
+                            <a class="btn btn-outline-primary" href="/users/${each.id}" role="button">Details</a>
+                        </div>
+                </div>
+            </div>    
+        `
+        ).join("")
+        document.querySelector("#users").innerHTML = template
+    })
+    document.querySelector("#registerButton").addEventListener("click",(event)=>{
+        const photo = document.querySelector("#photo").value
+        const email = document.querySelector("#email").value
+        const password = document.querySelector("#password").value
+        socket.emit("register", {photo, email, password})
+    })
+</script>
