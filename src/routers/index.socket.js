@@ -4,17 +4,17 @@ import productManager from "../data/fs/ProductManager.fs.js"
 export default async (socket) => {
 
     console.log("Client ID: " + socket.id)
-    socket.emit("usersRegister", await userManager.read())
-    socket.on("register", async data =>{
+    socket.emit("users", await userManager.read())
+    socket.on("newUser", async data =>{
         await userManager.create(data)
-        socket.emit("usersRegister", await userManager.read())
+        socket.emit("users", await userManager.read())
     })
 
     console.log("Product ID: " + socket.id)
-    socket.emit("productsRegister", await productManager.read())
-    socket.on("products", async data =>{
+    socket.emit("products", await productManager.read())
+    socket.on("newProduct", async data =>{
         await productManager.create(data)
-        socket.emit("productsRegister", await productManager.read())
+        socket.emit("products", await productManager.read())
     })
 }
 

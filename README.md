@@ -2,38 +2,22 @@
 
 ## Características principales
 
-- Crear usuarios y productos fácilmente de forma asincrona y archivados en una carpeta de formato JSON.
-- Uso de Fs y Crypyo
-- Todas las creaciones tienen un ID aleatorio.
-- Asignar condiciones estrictas para la creacion de usuarios y productos.
-- Logs para mantener a los usuarios informados sobre sus usuarios y tareas creadas.
-- Busqueda de productos y usuarios a travez de id, categoria y rol
-- Eliminacion de usuarios y productos habilitada
-- Realizacion de cambios en usuarios y productos habilitada
-- Uso de routes para un codigo mas ordenado y facilitacion de lectura del codigo
-- Manejo de errores y rutas no encontradas a traves de middlewares
+- Creacion de usuarios y productos
+- Todos los usuarios y productos creados contaran con un id aleatorio hexadecimal
+- Todo se guarda en un JSON local dentro del mismo archivo
+- El sitio es intuitivo para su uso
+- Las dos secciones tienen un apartado para crear nuevos usuarios y productos
+- Cada creacion va a tener un boton para ver sus detalles especificos
 
-## Instalación
+## Instalación y  visualizacion
 
 Para instalar sigue estos pasos:
 
-1. Clona el repositorio desde GitHub: `git clone https://github.com/estebanmaoloni/Desafio1-Coder.git`
-
-# Visualizacion
-
-- De ahora en mas las rutas deben ser visualizadas a traves de Postman
-
-# Descarga de Postman
-
-[https://www.postman.com/]
+1. Clona el repositorio desde la consola: `git clone https://github.com/estebanmaoloni/Desafio1-Coder.git`
+2. Ejecuta en consola `npm run dev` para levantar el servidor
+3. Abre el navegador y coloca la ruta `http://localhost:8080/`
+4. ¡Listo! Ya deberias poder experimentar el oproyecto en tu ordenado
 
 # Rutas
-- http://localhost:8080/api/products
-- http://localhost:8080/api/products/:pid
-- http://localhost:8080/api/users
-- http://localhost:8080/api/users:uid
+- Las rutas estan programadas a travez de los botones ya no es necesario ingresarlas manualmente
 
-# Datos a tener en cuenta
-
-- Cuando se utilicen las rudas con [:uid] y [:pid] deben ser atribuidos los id en la seccion [Value] de los productos o usuarios 
-que desea encontrar modificar o eliminar en la seccion [Params] de postman
