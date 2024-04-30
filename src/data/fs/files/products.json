@@ -222,5 +222,13 @@
     "category": "to do",
     "price": 500,
     "stock": 0
+  },
+  {
+    "id": "ebcd86c9b58c6c27f76e51ff",
+    "title": "Camisa Adidaas",
+    "photo": "https://assets.adidas.com/images/w_600,f_auto,q_auto/55b33abd313d467a9b40af0e0097c524_9366/Camisa_Adicolor_Classics_Negro_HS2074_01_laydown.jpg",
+    "category": "prendas",
+    "price": "200",
+    "stock": "50"
   }
 ]

@@ -15,7 +15,7 @@ Para instalar sigue estos pasos:
 
 1. Clona el repositorio desde la consola: `git clone https://github.com/estebanmaoloni/Desafio1-Coder.git`
 2. Ejecuta en consola `npm run dev` para levantar el servidor
-3. Abre el navegador y coloca la ruta `http://localhost:8080/`
+3. Abre el navegador y coloca la ruta `http://localhost:9000/`
 4. ¡Listo! Ya deberias poder experimentar el oproyecto en tu ordenado
 
 # Rutas
